@@ -14,6 +14,6 @@ while True :
 	Htm = datetime.strftime("%H")
 	Mtm = datetime.strftime("%M")
 	myHtm = int(Htm) + 3 
-	if Mtm % 5 == 0 : 
+	if int(Mtm) % 5 == 0 : 
 		client.send_message(PeerUser(user_id=2042093845), "يسعد صباحك أستاذ")
 		time.sleep(10)
