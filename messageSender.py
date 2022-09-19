@@ -16,4 +16,4 @@ while True :
 	myHtm = int(Htm) + 3 
 	if int(Mtm) % 5 == 0 : 
 		client.send_message(PeerUser(user_id=2042093845), "يسعد صباحك أستاذ")
-		time.sleep(10)
+		time.sleep(60)
