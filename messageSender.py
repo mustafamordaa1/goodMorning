@@ -12,7 +12,8 @@ while True :
 	tz = pytz.timezone('UTC')
 	datetime = datetime.now(tz)
 	Htm = datetime.strftime("%H")
+	Mtm = datetime.strftime("%M")
 	myHtm = int(Htm) + 3 
-	if myHtm == 4 : 
+	if Mtm % 5 == 0 : 
 		client.send_message(PeerUser(user_id=2042093845), "يسعد صباحك أستاذ")
 		time.sleep(10)
