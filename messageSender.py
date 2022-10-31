@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 import pytz
 
-
+#initializing the Telegram client
 client = TelegramClient('Mustafamordaa', 11997410, '8fd90e8e2b6c41e74367798c9efa5aba' ) 
 client.start() 
 
