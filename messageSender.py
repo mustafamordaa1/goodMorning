@@ -4,16 +4,22 @@ import time
 from datetime import datetime
 import pytz
 
+api_id = ""
+api_hash = ""
+
 #initializing the Telegram client
-client = TelegramClient('Mustafamordaa', 11997410, '8fd90e8e2b6c41e74367798c9efa5aba' ) 
+client = TelegramClient('SomeName', api_id, api_hash ) 
 client.start() 
 
+receiver_id = "get this id from telegram"
 while True :
-	tz = pytz.timezone('UTC')
+	#formatting the time.
+	tz = pytz.timezone('Egypt')
 	datetime = datetime.now(tz)
-	Htm = datetime.strftime("%H")
-	Mtm = datetime.strftime("%M")
-	myHtm = int(Htm) + 3 
-	if int(Mtm) % 10 == 0 : 
-		client.send_message(PeerUser(user_id=5244946853), "قومي جلي")
+	Hours = datetime.strftime("%H")
+	Mins = datetime.strftime("%M")
+	
+	#sets the message to be sent at 10 AM.
+	if Hours == 10 :
+		client.send_message(PeerUser(user_id= receiver_id), "your message")
 		time.sleep(60)
